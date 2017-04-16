@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<!-- By default, only the Clean and Build commands use this build script. -->
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+<project name="aistac-api-sockets" default="default" basedir=".">
+    <description>Builds, tests, and runs the project aistac-api-sockets</description>
+    <import file="nbproject/build-impl.xml"/>
+    <!--
+
+    There exist several targets which are by default empty and which can be
+    used for execution of your tasks. These targets are usually executed
+    before and after some main targets. They are:
+
+      -pre-init:                 called before initialization of project properties
+      -post-init:                called after initialization of project properties
+      -pre-compile:              called before javac compilation
+      -post-compile:             called after javac compilation
+      -pre-compile-single:       called before javac compilation of single file
+      -post-compile-single:      called after javac compilation of single file
+      -pre-compile-test:         called before javac compilation of JUnit tests
+      -post-compile-test:        called after javac compilation of JUnit tests
+      -pre-compile-test-single:  called before javac compilation of single JUnit test
+      -post-compile-test-single: called after javac compilation of single JUunit test
+      -pre-jar:                  called before JAR building
+      -post-jar:                 called after JAR building
+      -post-clean:               called after cleaning build products
+
+    (Targets beginning with '-' are not intended to be called on their own.)
+
+    Example of inserting an obfuscator after compilation could look like this:
+
+        <target name="-post-compile">
+            <obfuscate>
+                <fileset dir="${build.classes.dir}"/>
+            </obfuscate>
+        </target>
+
+    For list of available properties check the imported
+    nbproject/build-impl.xml file.
+
+
+    Another way to customize the build is by overriding existing main targets.
+    The targets of interest are:
+
+      -init-macrodef-javac:     defines macro for javac compilation
+      -init-macrodef-junit:     defines macro for junit execution
+      -init-macrodef-debug:     defines macro for class debugging
+      -init-macrodef-java:      defines macro for class execution
+      -do-jar:                  JAR building
+      run:                      execution of project
+      -javadoc-build:           Javadoc generation
+      test-report:              JUnit report generation
+
+    An example of overriding the target for project execution could look like this:
+
+        <target name="run" depends="OathouseMicroLibIO-impl.jar">
+            <exec dir="bin" executable="launcher.exe">
+                <arg file="${dist.jar}"/>
+            </exec>
+        </target>
+
+    Notice that the overridden target depends on the jar target and not only on
+    the compile target as the regular run target does. Again, for a list of available
+    properties which you can use, check the target you are overriding in the
+    nbproject/build-impl.xml file.
+
+    -->
+
+    <target name="-post-clean">
+        <propertyfile file="project.properties" comment="Build Number for ANT">
+            <entry key="project.version.iteration" type="int" operation="+" default="1" pattern="000" />
+        </propertyfile>
+    </target>
+
+    <target name="-pre-init">
+        <tstamp>
+           <format property="project.build.date" pattern="YYMMdd" />
+           <format property="project.build.time" pattern="HHmm" />
+        </tstamp>
+
+        <propertyfile file="project.properties" comment="Build Number for ANT">
+            <entry key="project.version.build.date" value="${project.build.date}"  />
+            <entry key="project.version.build.time" value="${project.build.time}"  />
+        </propertyfile>
+    </target>
+
+    <target name="-pre-jar">
+        <property file="project.properties" />
+        <tempfile deleteonexit="true" destdir="${build.dir}" property="tmp.manifest.file"/>
+        <touch file="${tmp.manifest.file}" verbose="false"/>
+        <manifest file="${manifest.file}">
+            <attribute name="Built-By" value="${user.name}" />
+            <attribute name="Main-Class" value="com.oathouse.oss.server.ObjectStoreServer" />
+            <section name="${ant.project.name}">
+                <attribute name="Specification-Title" value="${ant.project.name} ${manifest.specification.title}" />
+                <attribute name="Specification-Version" value="${project.version.major}.${project.version.minor}" />
+                <attribute name="Specification-Vendor" value="${manifest.specification.vendor}" />
+                <attribute name="Implementation-Title" value="${ant.project.name} ${manifest.implementation.title}" />
+                <attribute name="Implementation-Version" value="${project.version.iteration}" />
+                <attribute name="Implementation-Vendor" value="${manifest.implementation.vendor}" />
+            </section>
+            <section name="${manifest.section.package}">
+                <attribute name="Sealed" value="false"/>
+            </section>
+        </manifest>
+    </target>
+
+    <target depends="-javadoc-build" name="-post-jar">
+        <property file="project.properties" />
+        <property name="dist.jar" value="dist/${ant.project.name}-${project.version}.jar" />
+        <property name="dist.sources.jar" value="dist/${ant.project.name}-${project.version}-sources.jar" />
+        <property name="dist.javadocs.zip" value="dist/${ant.project.name}-${project.version}-javadocs.zip" />
+        <property name="dist.version.txt" value="version [${ant.project.name}].txt" />
+        <tstamp>
+           <format property="project.build.date.time" pattern="yyyy-MM-dd HH:mm" />
+        </tstamp>
+
+        <!-- zip up the javadocs -->
+        <zip basedir="${dist.javadoc.dir}" includes="**" destfile="${dist.javadocs.zip}" />
+        <!-- zip up the source -->
+        <jar basedir="${src.dir}" manifest="${manifest.file}" destfile="${dist.sources.jar}" />
+        <!-- increment the iteration number in the version file -->
+        <replace file="${dist.version.txt}" propertyFile="project.properties">
+            <replacefilter token="@major@" property="project.version.major" />
+            <replacefilter token="@minor@" property="project.version.minor" />
+            <replacefilter token="@iteration@" property="project.version.iteration" />
+            <replacefilter token="@date@" value="${project.build.date.time}" />
+        </replace>
+        <!-- delete the files from the project.lib.path -->
+        <delete failonerror="false">
+            <fileset dir="${project.lib.path}" includes="**/${ant.project.name}*"/>
+        </delete>
+        <!-- copy the 'versioned' files to project.lib.path -->
+        <copy file="${dist.jar}" tofile="${project.lib.path}/${ant.project.name}-${project.version}.jar" />
+        <copy file="${dist.javadocs.zip}" tofile="${project.lib.path}/${ant.project.name}-${project.version}-javadocs.jar" />
+        <copy file="${dist.sources.jar}" tofile="${project.lib.path}/${ant.project.name}-${project.version}-sources.jar" />
+        <copy file="${dist.version.txt}" tofile="${project.lib.path}/${ant.project.name}-${project.version}-version.txt" />
+        <!-- copy the 'latest' files to project.lib.path -->
+        <copy file="${dist.jar}" tofile="${project.lib.path}/${ant.project.name}-latest.jar" />
+        <copy file="${dist.javadocs.zip}" tofile="${project.lib.path}/${ant.project.name}-latest-javadocs.jar" />
+        <copy file="${dist.sources.jar}" tofile="${project.lib.path}/${ant.project.name}-latest-sources.jar" />
+        <copy file="${dist.version.txt}" tofile="${project.lib.path}/${ant.project.name}-latest-version.txt" />
+        <!-- Now reset the version file with the template header -->
+<!--
+        <concat destfile="${dist.version.txt}">
+            <header filtering="no" trimleading="no">============================================
+        Project Name = ${ant.project.name}
+============================================
+
+Release Version: @major@.@minor@.@iteration@  [@date@]
+=============================================
+[RELEASE SUMMARY]
+Iteration build.
+
+[RELEASE NOTES]
+none.
+
+[TESTING SUMMARY]
+complete.
+
+[TESTING NOTES]
+none.
+_____________________________________________
+=============================================
+            </header>
+            <fileset file="${project.lib.path}/${ant.project.name}-latest-version.txt"/>
+            <filterchain>
+                <headfilter lines="-1" skip="3"/>
+            </filterchain>
+        </concat>
+-->
+        <!-- make a backup of the project release and zip it -->
+        <copy todir="${project.backup.path}/${ant.project.name}-${project.version}" >
+            <fileset dir="../${ant.project.name}" >
+                <exclude name="**/dist/**"/>
+                <exclude name="**/dist"/>
+                <exclude name="**/build/**"/>
+                <exclude name="**/build"/>
+            </fileset>
+        </copy>
+        <zip basedir="${project.backup.path}/${ant.project.name}-${project.version}" includes="**" destfile="${project.backup.path}/${ant.project.name}-${project.version}${project.version.backup.suffix}.zip" />
+        <delete includeEmptyDirs="true">
+            <fileset dir="${project.backup.path}/${ant.project.name}-${project.version}" />
+        </delete>
+    </target>
+
+    <target name="-do-jar-with-libraries-without-manifest">
+    <!-- Inserted to prevent target from running so we can have a custom
+         manifest file with a class library project type. -->
+    </target>
+
+</project>

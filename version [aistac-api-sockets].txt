@@ -1,0 +1,18 @@
+============================================
+        Project Name = aistac-api-sockets
+============================================
+
+Release Version: 1.01.007  [2016-04-08 04:26]
+=============================================
+[RELEASE SUMMARY]
+Iteration build.
+
+[RELEASE NOTES]
+none.
+
+[TESTING SUMMARY]
+complete.
+
+[TESTING NOTES]
+none.
+_____________________________________________

@@ -1,0 +1,397 @@
+13:29:37.268 DEBUG        : 
+
+
+13:29:37.283 DEBUG        : *************************************
+13:29:37.283 DEBUG        : *******   START SERVER TEST   *******
+13:29:37.283 DEBUG        : *************************************
+13:29:37.283 INFO  SERVER : Starting Server '1' on Socket [localhost:12344]
+13:29:37.352 DEBUG SERVER : Waiting to accept incoming connection...
+13:29:53.604 DEBUG SERVER : Socket accepted from /127.0.0.1:61365
+13:29:53.604 DEBUG SERVER : Read Request [47] RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+13:29:53.620 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.635 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+13:29:53.635 DEBUG SERVER : Send Response ResponseBean{ status=CLOSE values=[] data=}
+13:29:53.635 DEBUG SERVER : Response received from executor: ResponseBean{ status=CLOSE values=[] data=Client request to close}
+13:29:53.635 DEBUG SERVER : Waiting to accept incoming connection...
+13:29:53.635 DEBUG SERVER : Socket accepted from /127.0.0.1:61366
+13:29:53.635 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+13:29:53.635 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.635 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+13:29:53.635 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.735 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+13:29:53.735 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.735 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+13:29:53.751 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.753 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+13:29:53.754 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.756 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+13:29:53.757 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.757 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+13:29:53.757 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.757 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+13:29:53.757 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.836 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=109 id=9 data=localhost}
+13:29:53.836 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.836 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=110 id=10 data=localhost}
+13:29:53.857 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.858 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+13:29:53.858 DEBUG SERVER : Send Response ResponseBean{ status=CLOSE values=[] data=}
+13:29:53.858 DEBUG SERVER : Response received from executor: ResponseBean{ status=CLOSE values=[] data=Client request to close}
+13:29:53.858 DEBUG SERVER : Waiting to accept incoming connection...
+13:30:11.002 DEBUG SERVER : Socket accepted from /127.0.0.1:61373
+13:30:11.004 DEBUG SERVER : Read Request [46] RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+13:30:11.006 DEBUG SERVER : Send Response ResponseBean{ status=EXIT values=[] data=}
+13:30:11.006 DEBUG SERVER : Response received from executor: ResponseBean{ status=EXIT values=[] data=Client request to close}
+13:30:11.006 DEBUG SERVER : 	Exiting server connection
+13:30:11.007 INFO  SERVER : Exiting Server '1' on Socket [localhost:12344]
+13:55:43.509 DEBUG        : 
+
+
+13:55:43.509 DEBUG        : *************************************
+13:55:43.509 DEBUG        : *******   START SERVER TEST   *******
+13:55:43.509 DEBUG        : *************************************
+13:55:43.509 INFO  SERVER : Starting Server '1' on Socket [localhost:12344]
+13:55:43.577 DEBUG SERVER : Waiting to accept incoming connection...
+13:55:58.892 DEBUG SERVER : Socket accepted from /127.0.0.1:62292
+13:55:58.892 DEBUG SERVER : Read Request [46] RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+13:55:58.892 DEBUG SERVER : Send Response ResponseBean{ status=EXIT values=[] data=}
+13:55:58.892 DEBUG SERVER : Response received from executor: ResponseBean{ status=EXIT values=[] data=Client request to close}
+13:55:58.908 DEBUG SERVER : 	Exiting server connection
+13:55:58.908 INFO  SERVER : Exiting Server '1' on Socket [localhost:12344]
+13:59:44.916 DEBUG        : 
+
+
+13:59:44.932 DEBUG        : *************************************
+13:59:44.932 DEBUG        : *******   START SERVER TEST   *******
+13:59:44.932 DEBUG        : *************************************
+13:59:44.932 INFO  SERVER : Starting Server '1' on Socket [localhost:12344]
+13:59:45.000 DEBUG SERVER : Waiting to accept incoming connection...
+13:59:50.954 DEBUG SERVER : Socket accepted from /127.0.0.1:62449
+13:59:50.954 DEBUG SERVER : Read Request [46] RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+13:59:50.954 DEBUG SERVER : Send Response ResponseBean{ status=EXIT values=[] data=}
+13:59:50.970 DEBUG SERVER : Response received from executor: ResponseBean{ status=EXIT values=[] data=Client request to close}
+13:59:50.970 DEBUG SERVER : 	Exiting server connection
+13:59:50.970 INFO  SERVER : Exiting Server '1' on Socket [localhost:12344]
+14:02:13.617 DEBUG        : 
+
+
+14:02:13.617 DEBUG        : *************************************
+14:02:13.617 DEBUG        : *******   START SERVER TEST   *******
+14:02:13.617 DEBUG        : *************************************
+14:02:13.634 INFO  SERVER : Starting Server '1' on Socket [localhost:12344]
+14:02:13.686 DEBUG SERVER : Waiting to accept incoming connection...
+14:02:36.031 DEBUG SERVER : Socket accepted from /127.0.0.1:62519
+14:02:36.035 DEBUG SERVER : Read Request [46] RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+14:02:36.035 DEBUG SERVER : Send Response ResponseBean{ status=EXIT values=[] data=}
+14:02:36.035 DEBUG SERVER : Response received from executor: ResponseBean{ status=EXIT values=[] data=Client request to close}
+14:02:36.035 DEBUG SERVER : 	Exiting server connection
+14:02:36.035 INFO  SERVER : Exiting Server '1' on Socket [localhost:12344]
+14:03:24.302 DEBUG        : 
+
+
+14:03:24.302 DEBUG        : *************************************
+14:03:24.302 DEBUG        : *******   START SERVER TEST   *******
+14:03:24.302 DEBUG        : *************************************
+14:03:24.302 INFO  SERVER : Starting Server '1' on Socket [localhost:12344]
+14:03:24.364 DEBUG SERVER : Waiting to accept incoming connection...
+14:03:37.930 DEBUG SERVER : Socket accepted from /127.0.0.1:62543
+14:03:37.930 DEBUG SERVER : Read Request [46] RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+14:03:37.930 DEBUG SERVER : Send Response ResponseBean{ status=EXIT values=[] data=}
+14:03:37.946 DEBUG SERVER : Response received from executor: ResponseBean{ status=EXIT values=[] data=Client request to close}
+14:03:37.946 DEBUG SERVER : 	Exiting server connection
+14:03:37.946 INFO  SERVER : Exiting Server '1' on Socket [localhost:12344]
+14:21:40.386 DEBUG        : 
+
+
+14:21:40.386 DEBUG        : *************************************
+14:21:40.386 DEBUG        : *******   START SERVER TEST   *******
+14:21:40.386 DEBUG        : *************************************
+14:21:40.401 INFO  SERVER : Starting Server '1' on Socket [localhost:12344]
+14:21:40.470 DEBUG SERVER : Waiting to accept incoming connection...
+14:21:48.072 DEBUG SERVER : Socket accepted from /127.0.0.1:63014
+14:21:48.072 DEBUG SERVER : Read Request [47] RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+14:21:48.088 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.088 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:21:48.104 DEBUG SERVER : Send Response ResponseBean{ status=CLOSE values=[] data=}
+14:21:48.106 DEBUG SERVER : Response received from executor: ResponseBean{ status=CLOSE values=[] data=Client request to close}
+14:21:48.106 DEBUG SERVER : Waiting to accept incoming connection...
+14:21:48.110 DEBUG SERVER : Socket accepted from /127.0.0.1:63015
+14:21:48.110 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+14:21:48.110 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.125 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+14:21:48.172 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.204 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+14:21:48.205 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.230 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+14:21:48.230 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.245 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+14:21:48.245 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.261 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+14:21:48.261 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.292 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+14:21:48.292 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.310 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+14:21:48.311 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.330 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=109 id=9 data=localhost}
+14:21:48.330 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.345 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=110 id=10 data=localhost}
+14:21:48.345 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.361 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:21:48.392 DEBUG SERVER : Send Response ResponseBean{ status=CLOSE values=[] data=}
+14:21:48.392 DEBUG SERVER : Response received from executor: ResponseBean{ status=CLOSE values=[] data=Client request to close}
+14:21:48.392 DEBUG SERVER : Waiting to accept incoming connection...
+14:22:26.001 DEBUG SERVER : Socket accepted from /127.0.0.1:63029
+14:22:26.001 DEBUG SERVER : Read Request [47] RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+14:22:26.001 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.016 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:22:26.016 DEBUG SERVER : Send Response ResponseBean{ status=CLOSE values=[] data=}
+14:22:26.016 DEBUG SERVER : Response received from executor: ResponseBean{ status=CLOSE values=[] data=Client request to close}
+14:22:26.016 DEBUG SERVER : Waiting to accept incoming connection...
+14:22:26.016 DEBUG SERVER : Socket accepted from /127.0.0.1:63030
+14:22:26.016 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+14:22:26.016 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.117 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+14:22:26.117 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.232 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+14:22:26.232 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.333 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+14:22:26.333 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.433 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+14:22:26.433 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.548 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+14:22:26.548 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.648 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+14:22:26.648 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.749 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+14:22:26.749 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.864 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=109 id=9 data=localhost}
+14:22:26.864 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.965 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=110 id=10 data=localhost}
+14:22:26.965 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:27.080 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:22:27.080 DEBUG SERVER : Send Response ResponseBean{ status=CLOSE values=[] data=}
+14:22:27.080 DEBUG SERVER : Response received from executor: ResponseBean{ status=CLOSE values=[] data=Client request to close}
+14:22:27.080 DEBUG SERVER : Waiting to accept incoming connection...
+14:22:37.149 DEBUG SERVER : Socket accepted from /127.0.0.1:63039
+14:22:37.149 DEBUG SERVER : Read Request [47] RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+14:22:37.149 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:37.164 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:22:37.164 DEBUG SERVER : Send Response ResponseBean{ status=CLOSE values=[] data=}
+14:22:37.164 DEBUG SERVER : Response received from executor: ResponseBean{ status=CLOSE values=[] data=Client request to close}
+14:22:37.164 DEBUG SERVER : Waiting to accept incoming connection...
+14:22:37.164 DEBUG SERVER : Socket accepted from /127.0.0.1:63040
+14:22:37.164 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+14:22:37.164 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:38.171 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+14:22:38.171 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:39.172 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+14:22:39.172 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:40.172 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+14:22:40.172 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:41.176 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+14:22:41.176 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:42.179 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+14:22:42.179 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:43.189 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+14:22:43.189 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:44.192 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+14:22:44.192 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:45.193 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=109 id=9 data=localhost}
+14:22:45.193 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:46.202 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=110 id=10 data=localhost}
+14:22:46.202 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:22:47.205 ERROR CATCHING[ EXCEPTION ] : catching
+java.util.concurrent.ExecutionException: java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.PendingFuture.get(PendingFuture.java:202) ~[?:1.8.0_40]
+	at com.oathouse.microlib.common.io.handler.sockets.SocketClientAsynchronousHandler.sendRequest(SocketClientAsynchronousHandler.java:140) [classes/:?]
+	at com.oathouse.microlib.common.io.handler.sockets.SocketClientAsynchronousHandler.run(SocketClientAsynchronousHandler.java:61) [classes/:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_40]
+Caused by: java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.WindowsAsynchronousSocketChannelImpl.write0(Native Method) ~[?:1.8.0_40]
+	at sun.nio.ch.WindowsAsynchronousSocketChannelImpl.access$900(WindowsAsynchronousSocketChannelImpl.java:43) ~[?:1.8.0_40]
+	at sun.nio.ch.WindowsAsynchronousSocketChannelImpl$WriteTask.run(WindowsAsynchronousSocketChannelImpl.java:778) ~[?:1.8.0_40]
+	at sun.nio.ch.WindowsAsynchronousSocketChannelImpl.implWrite(WindowsAsynchronousSocketChannelImpl.java:916) ~[?:1.8.0_40]
+	at sun.nio.ch.AsynchronousSocketChannelImpl.write(AsynchronousSocketChannelImpl.java:382) ~[?:1.8.0_40]
+	at sun.nio.ch.AsynchronousSocketChannelImpl.write(AsynchronousSocketChannelImpl.java:387) ~[?:1.8.0_40]
+	... 3 more
+14:22:47.221 ERROR        : Client error: Unable to read from server because of an java.util.concurrent.ExecutionException: java.io.IOException: An existing connection was forcibly closed by the remote host
+14:28:06.533 DEBUG        : 
+
+
+14:28:06.533 DEBUG        : *************************************
+14:28:06.533 DEBUG        : *******   START SERVER TEST   *******
+14:28:06.533 DEBUG        : *************************************
+14:28:06.549 INFO  SERVER : Starting Server '1' on Socket [localhost:12344]
+14:28:06.611 DEBUG SERVER : Waiting to accept incoming connection...
+14:28:11.569 DEBUG SERVER : Socket accepted from /127.0.0.1:63168
+14:28:11.584 DEBUG SERVER : Read Request [47] RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+14:28:11.584 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:28:11.600 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:28:11.600 DEBUG SERVER : Send Response ResponseBean{ status=CLOSE values=[] data=}
+14:28:11.600 DEBUG SERVER : Response received from executor: ResponseBean{ status=CLOSE values=[] data=Client request to close}
+14:28:11.600 DEBUG SERVER : Waiting to accept incoming connection...
+14:28:11.600 DEBUG SERVER : Socket accepted from /127.0.0.1:63169
+14:28:11.600 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+14:28:11.600 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:28:12.603 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+14:28:12.603 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:28:13.607 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+14:28:13.607 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:28:14.619 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+14:28:14.619 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:28:15.622 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+14:28:15.622 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:28:16.624 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+14:28:16.624 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:28:17.638 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+14:28:17.638 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:28:18.640 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+14:28:18.640 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:28:19.644 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=109 id=9 data=localhost}
+14:28:19.644 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:28:20.656 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=110 id=10 data=localhost}
+14:28:20.656 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:28:20.741 ERROR SERVER : Server error: Exception thrown when recieving data: java.util.concurrent.ExecutionException: java.io.IOException: The specified network name is no longer available.
+
+14:28:20.741 DEBUG SERVER : Response received from executor: ResponseBean{ status=CLOSE values=[] data=asynchronousSocketChannel closed}
+14:28:20.741 DEBUG SERVER : Waiting to accept incoming connection...
+14:46:32.262 DEBUG        : 
+
+
+14:46:32.263 DEBUG        : *************************************
+14:46:32.264 DEBUG        : *******   START SERVER TEST   *******
+14:46:32.264 DEBUG        : *************************************
+14:46:32.267 INFO  SERVER : Starting Server '1' on Socket [localhost:12344]
+14:46:32.330 ERROR SERVER : IOException when running server with message: Address already in use: bind
+14:46:32.330 ERROR CATCHING[ EXCEPTION ] : catching
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:1.8.0_40]
+	at sun.nio.ch.Net.bind(Net.java:437) ~[?:1.8.0_40]
+	at sun.nio.ch.Net.bind(Net.java:429) ~[?:1.8.0_40]
+	at sun.nio.ch.AsynchronousServerSocketChannelImpl.bind(AsynchronousServerSocketChannelImpl.java:162) ~[?:1.8.0_40]
+	at java.nio.channels.AsynchronousServerSocketChannel.bind(AsynchronousServerSocketChannel.java:193) ~[?:1.8.0_40]
+	at com.oathouse.microlib.common.io.handler.sockets.SocketServerAsynchronousHandler.run(SocketServerAsynchronousHandler.java:70) [classes/:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_40]
+14:46:32.330 INFO  SERVER : Exiting Server '1' on Socket [localhost:12344]
+14:46:59.504 DEBUG        : 
+
+
+14:46:59.504 DEBUG        : *************************************
+14:46:59.519 DEBUG        : *******   START SERVER TEST   *******
+14:46:59.519 DEBUG        : *************************************
+14:46:59.519 INFO  SERVER : Starting Server '1' on Socket [localhost:12344]
+14:46:59.582 DEBUG SERVER : Waiting to accept incoming connection...
+14:47:05.527 DEBUG SERVER : Socket accepted from /127.0.0.1:63592
+14:47:05.527 DEBUG SERVER : Read Request [47] RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+14:47:05.527 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:05.543 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:47:05.543 DEBUG SERVER : Send Response ResponseBean{ status=CLOSE values=[] data=}
+14:47:05.543 DEBUG SERVER : Response received from executor: ResponseBean{ status=CLOSE values=[] data=Client request to close}
+14:47:05.543 DEBUG SERVER : Waiting to accept incoming connection...
+14:47:05.543 DEBUG SERVER : Socket accepted from /127.0.0.1:63593
+14:47:05.543 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+14:47:05.558 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:06.564 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+14:47:06.564 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:07.570 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+14:47:07.570 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:08.582 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+14:47:08.582 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:09.583 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+14:47:09.583 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:10.583 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+14:47:10.583 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:11.591 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+14:47:11.591 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:12.597 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+14:47:12.597 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:13.598 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=109 id=9 data=localhost}
+14:47:13.598 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:14.604 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=110 id=10 data=localhost}
+14:47:14.604 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:15.608 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:47:15.608 DEBUG SERVER : Send Response ResponseBean{ status=CLOSE values=[] data=}
+14:47:15.608 DEBUG SERVER : Response received from executor: ResponseBean{ status=CLOSE values=[] data=Client request to close}
+14:47:15.608 DEBUG SERVER : Waiting to accept incoming connection...
+14:47:21.343 DEBUG SERVER : Socket accepted from /127.0.0.1:63600
+14:47:21.346 DEBUG SERVER : Read Request [46] RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+14:47:21.346 DEBUG SERVER : Send Response ResponseBean{ status=EXIT values=[] data=}
+14:47:21.346 DEBUG SERVER : Response received from executor: ResponseBean{ status=EXIT values=[] data=Client request to close}
+14:47:21.346 DEBUG SERVER : 	Exiting server connection
+14:47:21.346 INFO  SERVER : Exiting Server '1' on Socket [localhost:12344]
+14:47:27.009 DEBUG        : 
+
+
+14:47:27.025 DEBUG        : *************************************
+14:47:27.025 DEBUG        : *******   START SERVER TEST   *******
+14:47:27.025 DEBUG        : *************************************
+14:47:27.025 INFO  SERVER : Starting Server '1' on Socket [localhost:12344]
+14:47:27.094 DEBUG SERVER : Waiting to accept incoming connection...
+14:47:32.181 DEBUG SERVER : Socket accepted from /127.0.0.1:63604
+14:47:32.181 DEBUG SERVER : Read Request [47] RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+14:47:32.197 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:32.197 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:47:32.197 DEBUG SERVER : Send Response ResponseBean{ status=CLOSE values=[] data=}
+14:47:32.197 DEBUG SERVER : Response received from executor: ResponseBean{ status=CLOSE values=[] data=Client request to close}
+14:47:32.197 DEBUG SERVER : Waiting to accept incoming connection...
+14:47:32.213 DEBUG SERVER : Socket accepted from /127.0.0.1:63605
+14:47:32.213 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+14:47:32.213 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:33.218 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+14:47:33.218 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:34.219 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+14:47:34.219 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:35.219 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+14:47:35.219 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:36.224 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+14:47:36.224 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:37.229 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+14:47:37.229 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+14:47:38.230 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+14:47:38.230 DEBUG SERVER : Send Response ResponseBean{ status=SUCCESS values=[] data=}
+23:27:11.801 DEBUG        : 
+
+
+23:27:11.801 DEBUG        : *************************************
+23:27:11.801 DEBUG        : *******   START SERVER TEST   *******
+23:27:11.801 DEBUG        : *************************************
+23:27:11.801 INFO  SERVER : Starting Server '1' on Socket [localhost:12344]
+23:27:11.870 DEBUG SERVER : Waiting to accept incoming connection...
+23:27:22.079 DEBUG SERVER : Socket accepted from /127.0.0.1:64938
+23:27:22.095 DEBUG SERVER : Read Request [47] RequestBean{ cmd=DATA id=1 host=Alive port=101 authority=Auth data=The Message in a socket}
+23:27:22.095 DEBUG SERVER : Send Response Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:22.112 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE id=1 host=Close port=101 authority=Auth data=The Message in a socket}
+23:27:22.113 DEBUG SERVER : Send Response Response{status=CLOSE, id=-1, authority=, data=}
+23:27:22.114 DEBUG SERVER : Response received from executor: Response{status=CLOSE, id=-1, authority=, data=Client request to close}
+23:27:22.115 DEBUG SERVER : Waiting to accept incoming connection...
+23:27:22.117 DEBUG SERVER : Socket accepted from /127.0.0.1:64939
+23:27:22.117 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE id=1 host=Test port=101 authority=Multi data=localhost}
+23:27:22.117 DEBUG SERVER : Send Response Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:23.119 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE id=2 host=Test port=102 authority=Multi data=localhost}
+23:27:23.119 DEBUG SERVER : Send Response Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:24.119 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE id=3 host=Test port=103 authority=Multi data=localhost}
+23:27:24.119 DEBUG SERVER : Send Response Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:25.124 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE id=4 host=Test port=104 authority=Multi data=localhost}
+23:27:25.125 DEBUG SERVER : Send Response Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:26.129 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE id=5 host=Test port=105 authority=Multi data=localhost}
+23:27:26.130 DEBUG SERVER : Send Response Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:27.131 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE id=6 host=Test port=106 authority=Multi data=localhost}
+23:27:27.132 DEBUG SERVER : Send Response Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:28.137 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE id=7 host=Test port=107 authority=Multi data=localhost}
+23:27:28.139 DEBUG SERVER : Send Response Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:29.142 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE id=8 host=Test port=108 authority=Multi data=localhost}
+23:27:29.144 DEBUG SERVER : Send Response Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:30.146 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE id=9 host=Test port=109 authority=Multi data=localhost}
+23:27:30.147 DEBUG SERVER : Send Response Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:31.150 DEBUG SERVER : Read Request [33] RequestBean{ cmd=ALIVE id=10 host=Test port=110 authority=Multi data=localhost}
+23:27:31.152 DEBUG SERVER : Send Response Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:32.155 DEBUG SERVER : Read Request [47] RequestBean{ cmd=CLOSE id=1 host=Close port=101 authority=Auth data=The Message in a socket}
+23:27:32.155 DEBUG SERVER : Send Response Response{status=CLOSE, id=-1, authority=, data=}
+23:27:32.155 DEBUG SERVER : Response received from executor: Response{status=CLOSE, id=-1, authority=, data=Client request to close}
+23:27:32.155 DEBUG SERVER : Waiting to accept incoming connection...
+23:27:39.591 DEBUG SERVER : Socket accepted from /127.0.0.1:64948
+23:27:39.607 DEBUG SERVER : Read Request [46] RequestBean{ cmd=EXIT id=1 host=Exit port=101 authority=Auth data=The Message in a socket}
+23:27:39.607 DEBUG SERVER : Send Response Response{status=EXIT, id=-1, authority=, data=}
+23:27:39.607 DEBUG SERVER : Response received from executor: Response{status=EXIT, id=-1, authority=, data=Client request to close}
+23:27:39.607 DEBUG SERVER : 	Exiting server connection
+23:27:39.607 INFO  SERVER : Exiting Server '1' on Socket [localhost:12344]

@@ -1,0 +1,409 @@
+
+13:29:37.268 DEBUG        : 
+
+
+13:29:37.283 DEBUG        : *************************************
+13:29:37.283 DEBUG        : *******   START SERVER TEST   *******
+13:29:37.283 DEBUG        : *************************************
+13:29:53.535 INFO  CLIENT : Starting Client '1' on Socket [localhost:12344]
+13:29:53.535 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '1'
+13:29:53.604 DEBUG CLIENT : Conecting client '1' to [localhost:12344]
+13:29:53.604 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+13:29:53.620 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.620 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+13:29:53.635 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=CLOSE values=[] data=}
+13:29:53.635 DEBUG CLIENT : Disconnecting client '1' on socket [localhost:12344]
+13:29:53.635 INFO  CLIENT : Starting Client '1' on Socket [localhost:12344]
+13:29:53.635 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '1'
+13:29:53.635 DEBUG CLIENT : Conecting client '1' to [localhost:12344]
+13:29:53.635 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+13:29:53.635 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.635 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+13:29:53.635 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.735 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+13:29:53.735 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.735 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+13:29:53.751 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.752 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+13:29:53.754 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.755 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+13:29:53.757 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.757 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+13:29:53.757 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.757 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+13:29:53.757 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.836 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=109 id=9 data=localhost}
+13:29:53.836 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.836 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=110 id=10 data=localhost}
+13:29:53.857 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+13:29:53.858 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+13:29:53.858 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=CLOSE values=[] data=}
+13:29:53.858 DEBUG CLIENT : Disconnecting client '1' on socket [localhost:12344]
+13:30:10.923 INFO  CLIENT : Starting Client '1' on Socket [localhost:12344]
+13:30:10.923 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '1'
+13:30:10.985 DEBUG CLIENT : Conecting client '1' to [localhost:12344]
+13:30:11.002 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+13:30:11.007 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=EXIT values=[] data=}
+13:30:11.007 DEBUG CLIENT : Disconnecting client '1' on socket [localhost:12344]
+13:55:43.509 DEBUG        : 
+
+
+13:55:43.509 DEBUG        : *************************************
+13:55:43.509 DEBUG        : *******   START SERVER TEST   *******
+13:55:43.509 DEBUG        : *************************************
+13:55:58.823 INFO  CLIENT : Starting Client '99' on Socket [localhost:12344]
+13:55:58.823 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '99'
+13:55:58.892 DEBUG CLIENT : Conecting client '99' to [localhost:12344]
+13:55:58.892 DEBUG CLIENT : Client '99' Sending Request: RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+13:55:58.908 DEBUG CLIENT : Client '99' Received Response [5]: ResponseBean{ status=EXIT values=[] data=}
+13:55:58.908 DEBUG CLIENT : Disconnecting client '99' on socket [localhost:12344]
+13:59:44.916 DEBUG        : 
+
+
+13:59:44.932 DEBUG        : *************************************
+13:59:44.932 DEBUG        : *******   START SERVER TEST   *******
+13:59:44.932 DEBUG        : *************************************
+13:59:50.885 INFO  CLIENT : Starting Client '99' on Socket [localhost:12344]
+13:59:50.885 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '99'
+13:59:50.954 DEBUG CLIENT : Conecting client '99' to [localhost:12344]
+13:59:50.954 DEBUG CLIENT : Client '99' Sending Request: RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+13:59:50.970 DEBUG CLIENT : Client '99' Received Response [5]: ResponseBean{ status=EXIT values=[] data=}
+13:59:50.970 DEBUG CLIENT : Disconnecting client '99' on socket [localhost:12344]
+14:02:13.617 DEBUG        : 
+
+
+14:02:13.617 DEBUG        : *************************************
+14:02:13.617 DEBUG        : *******   START SERVER TEST   *******
+14:02:13.617 DEBUG        : *************************************
+14:02:35.951 INFO  CLIENT : Starting Client '99' on Socket [localhost:12344]
+14:02:35.967 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '99'
+14:02:36.014 DEBUG CLIENT : Conecting client '99' to [localhost:12344]
+14:02:36.031 DEBUG CLIENT : Client '99' Sending Request: RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+14:02:36.035 DEBUG CLIENT : Client '99' Received Response [5]: ResponseBean{ status=EXIT values=[] data=}
+14:02:36.035 DEBUG CLIENT : Disconnecting client '99' on socket [localhost:12344]
+14:03:24.302 DEBUG        : 
+
+
+14:03:24.302 DEBUG        : *************************************
+14:03:24.302 DEBUG        : *******   START SERVER TEST   *******
+14:03:24.302 DEBUG        : *************************************
+14:03:37.861 INFO  CLIENT : Starting Client '99' on Socket [localhost:12344]
+14:03:37.861 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '99'
+14:03:37.930 DEBUG CLIENT : Conecting client '99' to [localhost:12344]
+14:03:37.930 DEBUG CLIENT : Client '99' Sending Request: RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+14:03:37.946 DEBUG CLIENT : Client '99' Received Response [5]: ResponseBean{ status=EXIT values=[] data=}
+14:03:37.946 DEBUG CLIENT : Disconnecting client '99' on socket [localhost:12344]
+14:10:26.391 INFO  CLIENT : Starting Client '99' on Socket [localhost:12344]
+14:10:26.391 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '99'
+14:10:26.454 DEBUG CLIENT : Conecting client '99' to [localhost:12344]
+14:10:26.470 DEBUG CLIENT : Client '99' Sending Request: RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+14:10:26.477 DEBUG CLIENT : Client '99' Received Response [5]: ResponseBean{ status=EXIT values=[] data=}
+14:10:26.477 DEBUG CLIENT : Disconnecting client '99' on socket [localhost:12344]
+14:21:40.386 DEBUG        : 
+
+
+14:21:40.386 DEBUG        : *************************************
+14:21:40.386 DEBUG        : *******   START SERVER TEST   *******
+14:21:40.386 DEBUG        : *************************************
+14:21:48.010 INFO  CLIENT : Starting Client '1' on Socket [localhost:12344]
+14:21:48.010 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '1'
+14:21:48.072 DEBUG CLIENT : Conecting client '1' to [localhost:12344]
+14:21:48.072 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+14:21:48.088 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.088 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:21:48.105 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=CLOSE values=[] data=}
+14:21:48.105 DEBUG CLIENT : Disconnecting client '1' on socket [localhost:12344]
+14:21:48.110 INFO  CLIENT : Starting Client '2' on Socket [localhost:12344]
+14:21:48.110 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '2'
+14:21:48.110 DEBUG CLIENT : Conecting client '2' to [localhost:12344]
+14:21:48.110 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+14:21:48.110 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.125 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+14:21:48.172 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.204 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+14:21:48.206 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.230 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+14:21:48.230 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.245 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+14:21:48.245 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.261 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+14:21:48.261 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.292 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+14:21:48.292 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.309 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+14:21:48.312 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.330 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=109 id=9 data=localhost}
+14:21:48.330 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.345 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=110 id=10 data=localhost}
+14:21:48.345 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:21:48.361 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:21:48.392 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=CLOSE values=[] data=}
+14:21:48.392 DEBUG CLIENT : Disconnecting client '2' on socket [localhost:12344]
+14:22:25.932 INFO  CLIENT : Starting Client '1' on Socket [localhost:12344]
+14:22:25.932 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '1'
+14:22:26.001 DEBUG CLIENT : Conecting client '1' to [localhost:12344]
+14:22:26.001 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+14:22:26.016 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.016 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:22:26.016 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=CLOSE values=[] data=}
+14:22:26.016 DEBUG CLIENT : Disconnecting client '1' on socket [localhost:12344]
+14:22:26.016 INFO  CLIENT : Starting Client '2' on Socket [localhost:12344]
+14:22:26.016 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '2'
+14:22:26.016 DEBUG CLIENT : Conecting client '2' to [localhost:12344]
+14:22:26.016 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+14:22:26.016 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.117 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+14:22:26.117 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.232 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+14:22:26.232 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.333 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+14:22:26.333 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.433 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+14:22:26.433 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.548 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+14:22:26.548 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.648 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+14:22:26.648 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.749 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+14:22:26.749 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.864 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=109 id=9 data=localhost}
+14:22:26.864 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:26.965 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=110 id=10 data=localhost}
+14:22:26.965 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:27.080 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:22:27.080 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=CLOSE values=[] data=}
+14:22:27.080 DEBUG CLIENT : Disconnecting client '2' on socket [localhost:12344]
+14:22:37.064 INFO  CLIENT : Starting Client '1' on Socket [localhost:12344]
+14:22:37.080 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '1'
+14:22:37.149 DEBUG CLIENT : Conecting client '1' to [localhost:12344]
+14:22:37.149 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+14:22:37.149 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:37.164 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:22:37.164 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=CLOSE values=[] data=}
+14:22:37.164 DEBUG CLIENT : Disconnecting client '1' on socket [localhost:12344]
+14:22:37.164 INFO  CLIENT : Starting Client '2' on Socket [localhost:12344]
+14:22:37.164 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '2'
+14:22:37.164 DEBUG CLIENT : Conecting client '2' to [localhost:12344]
+14:22:37.164 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+14:22:37.164 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:38.171 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+14:22:38.171 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:39.172 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+14:22:39.172 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:40.172 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+14:22:40.172 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:41.176 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+14:22:41.176 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:42.179 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+14:22:42.179 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:43.189 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+14:22:43.189 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:44.192 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+14:22:44.192 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:45.193 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=109 id=9 data=localhost}
+14:22:45.193 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:46.202 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=110 id=10 data=localhost}
+14:22:46.202 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:22:47.205 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:22:47.205 ERROR CATCHING[ EXCEPTION ] : catching
+java.util.concurrent.ExecutionException: java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.PendingFuture.get(PendingFuture.java:202) ~[?:1.8.0_40]
+	at com.oathouse.microlib.common.io.handler.sockets.SocketClientAsynchronousHandler.sendRequest(SocketClientAsynchronousHandler.java:140) [classes/:?]
+	at com.oathouse.microlib.common.io.handler.sockets.SocketClientAsynchronousHandler.run(SocketClientAsynchronousHandler.java:61) [classes/:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_40]
+Caused by: java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.WindowsAsynchronousSocketChannelImpl.write0(Native Method) ~[?:1.8.0_40]
+	at sun.nio.ch.WindowsAsynchronousSocketChannelImpl.access$900(WindowsAsynchronousSocketChannelImpl.java:43) ~[?:1.8.0_40]
+	at sun.nio.ch.WindowsAsynchronousSocketChannelImpl$WriteTask.run(WindowsAsynchronousSocketChannelImpl.java:778) ~[?:1.8.0_40]
+	at sun.nio.ch.WindowsAsynchronousSocketChannelImpl.implWrite(WindowsAsynchronousSocketChannelImpl.java:916) ~[?:1.8.0_40]
+	at sun.nio.ch.AsynchronousSocketChannelImpl.write(AsynchronousSocketChannelImpl.java:382) ~[?:1.8.0_40]
+	at sun.nio.ch.AsynchronousSocketChannelImpl.write(AsynchronousSocketChannelImpl.java:387) ~[?:1.8.0_40]
+	... 3 more
+14:22:47.221 DEBUG CLIENT : Disconnecting client '2' on socket [localhost:12344]
+14:22:47.221 ERROR        : Client error: Unable to read from server because of an java.util.concurrent.ExecutionException: java.io.IOException: An existing connection was forcibly closed by the remote host
+14:28:06.533 DEBUG        : 
+
+
+14:28:06.533 DEBUG        : *************************************
+14:28:06.533 DEBUG        : *******   START SERVER TEST   *******
+14:28:06.533 DEBUG        : *************************************
+14:28:11.515 INFO  CLIENT : Starting Client '1' on Socket [localhost:12344]
+14:28:11.515 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '1'
+14:28:11.569 DEBUG CLIENT : Conecting client '1' to [localhost:12344]
+14:28:11.569 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+14:28:11.584 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:28:11.600 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:28:11.600 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=CLOSE values=[] data=}
+14:28:11.600 DEBUG CLIENT : Disconnecting client '1' on socket [localhost:12344]
+14:28:11.600 INFO  CLIENT : Starting Client '2' on Socket [localhost:12344]
+14:28:11.600 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '2'
+14:28:11.600 DEBUG CLIENT : Conecting client '2' to [localhost:12344]
+14:28:11.600 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+14:28:11.600 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:28:12.603 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+14:28:12.603 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:28:13.607 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+14:28:13.607 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:28:14.619 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+14:28:14.619 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:28:15.622 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+14:28:15.622 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:28:16.624 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+14:28:16.624 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:28:17.638 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+14:28:17.638 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:28:18.640 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+14:28:18.640 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:28:19.644 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=109 id=9 data=localhost}
+14:28:19.644 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:28:20.656 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=110 id=10 data=localhost}
+14:28:20.656 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:46:32.262 DEBUG        : 
+
+
+14:46:32.263 DEBUG        : *************************************
+14:46:32.264 DEBUG        : *******   START SERVER TEST   *******
+14:46:32.264 DEBUG        : *************************************
+14:46:32.330 ERROR CATCHING[ EXCEPTION ] : catching
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:1.8.0_40]
+	at sun.nio.ch.Net.bind(Net.java:437) ~[?:1.8.0_40]
+	at sun.nio.ch.Net.bind(Net.java:429) ~[?:1.8.0_40]
+	at sun.nio.ch.AsynchronousServerSocketChannelImpl.bind(AsynchronousServerSocketChannelImpl.java:162) ~[?:1.8.0_40]
+	at java.nio.channels.AsynchronousServerSocketChannel.bind(AsynchronousServerSocketChannel.java:193) ~[?:1.8.0_40]
+	at com.oathouse.microlib.common.io.handler.sockets.SocketServerAsynchronousHandler.run(SocketServerAsynchronousHandler.java:70) [classes/:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_40]
+14:46:59.504 DEBUG        : 
+
+
+14:46:59.504 DEBUG        : *************************************
+14:46:59.519 DEBUG        : *******   START SERVER TEST   *******
+14:46:59.519 DEBUG        : *************************************
+14:47:05.459 INFO  CLIENT : Starting Client '1' on Socket [localhost:12344]
+14:47:05.459 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '1'
+14:47:05.527 DEBUG CLIENT : Conecting client '1' to [localhost:12344]
+14:47:05.527 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+14:47:05.543 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:05.543 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:47:05.543 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=CLOSE values=[] data=}
+14:47:05.543 DEBUG CLIENT : Disconnecting client '1' on socket [localhost:12344]
+14:47:05.543 INFO  CLIENT : Exiting Client '1' on Socket [localhost:12344]
+14:47:05.543 INFO  CLIENT : Starting Client '2' on Socket [localhost:12344]
+14:47:05.543 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '2'
+14:47:05.543 DEBUG CLIENT : Conecting client '2' to [localhost:12344]
+14:47:05.543 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+14:47:05.558 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:06.564 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+14:47:06.564 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:07.570 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+14:47:07.570 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:08.582 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+14:47:08.582 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:09.583 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+14:47:09.583 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:10.583 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+14:47:10.583 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:11.591 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+14:47:11.591 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:12.597 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+14:47:12.597 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:13.598 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=109 id=9 data=localhost}
+14:47:13.598 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:14.604 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=110 id=10 data=localhost}
+14:47:14.604 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:15.608 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:47:15.608 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=CLOSE values=[] data=}
+14:47:15.608 DEBUG CLIENT : Disconnecting client '2' on socket [localhost:12344]
+14:47:15.608 INFO  CLIENT : Exiting Client '2' on Socket [localhost:12344]
+14:47:21.278 INFO  CLIENT : Starting Client '99' on Socket [localhost:12344]
+14:47:21.278 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '99'
+14:47:21.324 DEBUG CLIENT : Conecting client '99' to [localhost:12344]
+14:47:21.343 DEBUG CLIENT : Client '99' Sending Request: RequestBean{ cmd=EXIT authority=Auth manager=Exit key=101 id=1 data=The Message in a socket}
+14:47:21.346 DEBUG CLIENT : Client '99' Received Response [5]: ResponseBean{ status=EXIT values=[] data=}
+14:47:21.346 DEBUG CLIENT : Disconnecting client '99' on socket [localhost:12344]
+14:47:21.346 INFO  CLIENT : Exiting Client '99' on Socket [localhost:12344]
+14:47:27.009 DEBUG        : 
+
+
+14:47:27.025 DEBUG        : *************************************
+14:47:27.025 DEBUG        : *******   START SERVER TEST   *******
+14:47:27.025 DEBUG        : *************************************
+14:47:32.116 INFO  CLIENT : Starting Client '1' on Socket [localhost:12344]
+14:47:32.117 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '1'
+14:47:32.181 DEBUG CLIENT : Conecting client '1' to [localhost:12344]
+14:47:32.181 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=DATA authority=Auth manager=Alive key=101 id=1 data=The Message in a socket}
+14:47:32.197 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:32.197 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=CLOSE authority=Auth manager=Close key=101 id=1 data=The Message in a socket}
+14:47:32.197 DEBUG CLIENT : Client '1' Received Response [5]: ResponseBean{ status=CLOSE values=[] data=}
+14:47:32.197 DEBUG CLIENT : Disconnecting client '1' on socket [localhost:12344]
+14:47:32.197 INFO  CLIENT : Exiting Client '1' on Socket [localhost:12344]
+14:47:32.213 INFO  CLIENT : Starting Client '2' on Socket [localhost:12344]
+14:47:32.213 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '2'
+14:47:32.213 DEBUG CLIENT : Conecting client '2' to [localhost:12344]
+14:47:32.213 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=101 id=1 data=localhost}
+14:47:32.213 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:33.218 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=102 id=2 data=localhost}
+14:47:33.218 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:34.219 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=103 id=3 data=localhost}
+14:47:34.219 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:35.219 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=104 id=4 data=localhost}
+14:47:35.219 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:36.224 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=105 id=5 data=localhost}
+14:47:36.224 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:37.229 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=106 id=6 data=localhost}
+14:47:37.229 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:38.230 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=107 id=7 data=localhost}
+14:47:38.230 DEBUG CLIENT : Client '2' Received Response [5]: ResponseBean{ status=SUCCESS values=[] data=}
+14:47:39.231 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE authority=Multi manager=Test key=108 id=8 data=localhost}
+14:47:39.232 ERROR CLIENT : Client error: Unable to read from server because of an java.util.concurrent.ExecutionException: java.io.IOException: An existing connection was forcibly closed by the remote host
+14:47:39.233 DEBUG CLIENT : Disconnecting client '2' on socket [localhost:12344]
+14:47:39.234 INFO  CLIENT : Exiting Client '2' on Socket [localhost:12344]
+23:27:11.801 DEBUG        : 
+
+
+23:27:11.801 DEBUG        : *************************************
+23:27:11.801 DEBUG        : *******   START SERVER TEST   *******
+23:27:11.801 DEBUG        : *************************************
+23:27:22.015 INFO  CLIENT : Starting Client '1' on Socket [localhost:12344]
+23:27:22.017 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '1'
+23:27:22.079 DEBUG CLIENT : Conecting client '1' to [localhost:12344]
+23:27:22.079 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=DATA id=1 host=Alive port=101 authority=Auth data=The Message in a socket}
+23:27:22.095 DEBUG CLIENT : Client '1' Received Response [9]: Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:22.111 DEBUG CLIENT : Client '1' Sending Request: RequestBean{ cmd=CLOSE id=1 host=Close port=101 authority=Auth data=The Message in a socket}
+23:27:22.114 DEBUG CLIENT : Client '1' Received Response [9]: Response{status=CLOSE, id=-1, authority=, data=}
+23:27:22.114 DEBUG CLIENT : Disconnecting client '1' on socket [localhost:12344]
+23:27:22.115 INFO  CLIENT : Exiting Client '1' on Socket [localhost:12344]
+23:27:22.117 INFO  CLIENT : Starting Client '2' on Socket [localhost:12344]
+23:27:22.117 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '2'
+23:27:22.117 DEBUG CLIENT : Conecting client '2' to [localhost:12344]
+23:27:22.117 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE id=1 host=Test port=101 authority=Multi data=localhost}
+23:27:22.117 DEBUG CLIENT : Client '2' Received Response [9]: Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:23.119 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE id=2 host=Test port=102 authority=Multi data=localhost}
+23:27:23.119 DEBUG CLIENT : Client '2' Received Response [9]: Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:24.119 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE id=3 host=Test port=103 authority=Multi data=localhost}
+23:27:24.119 DEBUG CLIENT : Client '2' Received Response [9]: Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:25.123 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE id=4 host=Test port=104 authority=Multi data=localhost}
+23:27:25.126 DEBUG CLIENT : Client '2' Received Response [9]: Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:26.128 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE id=5 host=Test port=105 authority=Multi data=localhost}
+23:27:26.130 DEBUG CLIENT : Client '2' Received Response [9]: Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:27.130 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE id=6 host=Test port=106 authority=Multi data=localhost}
+23:27:27.132 DEBUG CLIENT : Client '2' Received Response [9]: Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:28.136 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE id=7 host=Test port=107 authority=Multi data=localhost}
+23:27:28.140 DEBUG CLIENT : Client '2' Received Response [9]: Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:29.141 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE id=8 host=Test port=108 authority=Multi data=localhost}
+23:27:29.144 DEBUG CLIENT : Client '2' Received Response [9]: Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:30.145 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE id=9 host=Test port=109 authority=Multi data=localhost}
+23:27:30.147 DEBUG CLIENT : Client '2' Received Response [9]: Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:31.149 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=ALIVE id=10 host=Test port=110 authority=Multi data=localhost}
+23:27:31.153 DEBUG CLIENT : Client '2' Received Response [9]: Response{status=SUCCESS, id=-1, authority=, data=}
+23:27:32.155 DEBUG CLIENT : Client '2' Sending Request: RequestBean{ cmd=CLOSE id=1 host=Close port=101 authority=Auth data=The Message in a socket}
+23:27:32.155 DEBUG CLIENT : Client '2' Received Response [9]: Response{status=CLOSE, id=-1, authority=, data=}
+23:27:32.155 DEBUG CLIENT : Disconnecting client '2' on socket [localhost:12344]
+23:27:32.155 INFO  CLIENT : Exiting Client '2' on Socket [localhost:12344]
+23:27:39.522 INFO  CLIENT : Starting Client '99' on Socket [localhost:12344]
+23:27:39.522 DEBUG CLIENT : Opening Asynchronous Socket Channel for client '99'
+23:27:39.591 DEBUG CLIENT : Conecting client '99' to [localhost:12344]
+23:27:39.591 DEBUG CLIENT : Client '99' Sending Request: RequestBean{ cmd=EXIT id=1 host=Exit port=101 authority=Auth data=The Message in a socket}
+23:27:39.607 DEBUG CLIENT : Client '99' Received Response [9]: Response{status=EXIT, id=-1, authority=, data=}
+23:27:39.607 DEBUG CLIENT : Disconnecting client '99' on socket [localhost:12344]
+23:27:39.607 INFO  CLIENT : Exiting Client '99' on Socket [localhost:12344]
