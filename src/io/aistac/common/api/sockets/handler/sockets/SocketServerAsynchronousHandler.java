@@ -31,7 +31,6 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -81,7 +80,7 @@ public class SocketServerAsynchronousHandler implements TaskHandlerInterface {
             return;
         }
         LOGGER.info(SERVER, "Starting Server [" + connection.getId() + "] on Socket [" + connection.getHost() + ":" + connection.getPort() + "]");
-        ExecutorService taskExecutor = Executors.newCachedThreadPool(Executors.defaultThreadFactory());
+
         try {
             LOGGER.trace(SERVER, "Opening Asynchronous Server Socket Channel");
             serverSocketChannel = AsynchronousServerSocketChannel.open();
@@ -92,12 +91,7 @@ public class SocketServerAsynchronousHandler implements TaskHandlerInterface {
                 //bind the server socket channel to local address
                 LOGGER.trace(SERVER, "Binding Server Socket Channel [" + connection.getId() + "] on Socket [" + connection.getHost() + ":" + connection.getPort() + "]");
                 serverSocketChannel.bind(new InetSocketAddress(connection.getHost(), connection.getPort()));
-                connect(taskExecutor);
-            }
-            LOGGER.trace(SERVER, "Shutting down Task Executor");
-            taskExecutor.shutdown();
-            while(!taskExecutor.isTerminated()) {
-                //wait until all threads are finished
+                connect();
             }
             LOGGER.trace(SERVER, "Shutting down Server socket");
             if(serverSocketChannel.isOpen()) {
@@ -109,7 +103,9 @@ public class SocketServerAsynchronousHandler implements TaskHandlerInterface {
         LOGGER.info(SERVER, "Exiting Server [" + connection.getId() + "] on Socket [" + connection.getHost() + ":" + connection.getPort() + "]");
     }
 
-    private void connect(ExecutorService taskExecutor) {
+    private void connect() {
+        ExecutorService taskExecutor = Executors.newCachedThreadPool(Executors.defaultThreadFactory());
+
         isRunning = true;
         if(!serverSocketChannel.isOpen()) {
             LOGGER.fatal(SERVER, "Server Socket not open when preparing to accept connections");
@@ -123,6 +119,9 @@ public class SocketServerAsynchronousHandler implements TaskHandlerInterface {
             LOGGER.debug(SERVER, "Waiting to accept incoming connection...");
             try (AsynchronousSocketChannel asynchronousSocketChannel = asynchronousSocketChannelFuture.get()) {
                 LOGGER.debug(SERVER, "Socket accepted from " + asynchronousSocketChannelFuture.get().getRemoteAddress().toString());
+                // clear the queues as we now have a new connection
+                TransportQueueService.queue(connection.getQueueIn()).clear();
+                TransportQueueService.queue(connection.getQueueOut()).clear();
                 // create the worker execute
                 Callable<Integer> worker = () -> {
                     return receiveData(asynchronousSocketChannel);
@@ -142,15 +141,20 @@ public class SocketServerAsynchronousHandler implements TaskHandlerInterface {
                 isRunning = false;
             }
         }
+        LOGGER.trace(SERVER, "Shutting down Task Executor");
+        taskExecutor.shutdownNow();
+        while(!taskExecutor.isTerminated()) {
+            //wait until all threads are finished
+        }
         LOGGER.debug(SERVER, "No longer waiting to accept incoming connection");
         isRunning = false;
     }
 
-    private int receiveData(final AsynchronousSocketChannel asynchronousSocketChannel) {
+    private int receiveData(final AsynchronousSocketChannel asynchronousSocketChannel) throws InterruptedException {
         final ByteBuffer buffer = ByteBuffer.allocateDirect(1024);
         //transmitting data
         try {
-            TransportBean request;
+            TransportBean request = null;
             // allo for 5 timeouts before closing the socket
             AtomicInteger timeoutRemaining = new AtomicInteger(5);
             while(asynchronousSocketChannel.isOpen()) {
@@ -161,7 +165,7 @@ public class SocketServerAsynchronousHandler implements TaskHandlerInterface {
                     buffer.clear();
                     // READ SOCKET
                     LOGGER.trace(SERVER, "Socket Channel Read");
-                    asynchronousSocketChannel.read(buffer).get(1, TimeUnit.SECONDS);
+                    asynchronousSocketChannel.read(buffer).get(5, TimeUnit.SECONDS);
                     buffer.flip();
                     // if the read buffer doesn't have anything, fall through and poll to see if anything to send
                     if(buffer.hasRemaining()) {
@@ -191,26 +195,37 @@ public class SocketServerAsynchronousHandler implements TaskHandlerInterface {
                     LOGGER.debug(SERVER, "Socket Channel read timed out before completing. Attempting another read");
                     continue;
                 }
-                TransportBean response = null;
+                // if the request is null then there will be no response
+                if(request == null) {
+                    LOGGER.debug(SERVER, "The Socket Channel read resulted in a null value request");
+                    continue;
+                }
+                TransportBean response;
                 try {
                     // WAIT RESPONSE QUEUE **
                     LOGGER.debug(SERVER, "Poll response queue [" + connection.getQueueOut() + "]");
-                    response = TransportQueueService.queue(connection.getQueueOut()).poll();
-                } catch(NullPointerException ex) {
-                    LOGGER.trace(SERVER, "Poll response queue [" + connection.getQueueOut() + "] threw an NullPointerException");
+                    response = TransportQueueService.queue(connection.getQueueOut()).poll(5, TimeUnit.SECONDS);
+                } catch(NullPointerException | InterruptedException ex) {
+                    LOGGER.trace(SERVER, "Poll response queue [" + connection.getQueueOut() + "] threw a " + ex.toString());
+                    response = null;
                 }
                 // check if null as timed out
                 if(response == null) {
                     LOGGER.debug(SERVER, "Response queue was empty");
-                    continue;
+                    final int command = CommandBits.CMD_FAILURE | CommandBits.REQ_NOT_USED | CommandBits.DATA_TEXT | CommandBits.OPT_RETRY;
+                    response = new TransportBean(request.getId(), request.getKey(), command, "A response to the request was not received in a timely manner", connection.getOwner());
+                }
+                // check the request and response match
+                if(request.getId() != response.getId() || request.getKey() != response.getKey()) {
+                    LOGGER.debug(SERVER, "The Request and Response TransportBeans do not match");
                 }
                 try {
                     // WRITE SOCKET
                     LOGGER.trace(SERVER, "Response TransportBean: " + response.toXML(PRINTED, TRIMMED));
                     LOGGER.debug(SERVER, "TransportBean response with command " + CommandBits.getStringFromBits(response.getCommand()) + " written to Socket");
-                    asynchronousSocketChannel.write(StringEncoder.encode(response.toXML())).get(1, TimeUnit.SECONDS);
+                    asynchronousSocketChannel.write(StringEncoder.encode(response.toXML())).get(5, TimeUnit.SECONDS);
                     if(CommandBits.contain(response.getCommand(), CommandBits.CMD_CLOSE)) {
-                         return CommandBits.CMD_CLOSE;
+                        return CommandBits.CMD_CLOSE;
                     }
                 } catch(TimeoutException ex) {
                     LOGGER.error(SERVER, "Timeout on socket write when sending a response. Request put back on queue queue [" + connection.getQueueOut() + "]");
@@ -222,6 +237,7 @@ public class SocketServerAsynchronousHandler implements TaskHandlerInterface {
             LOGGER.error(SERVER, "Exception thrown when recieving data: " + ex.toString());
             // just let it fall out to the end
         }
+        // return the closed command
         return CommandBits.CMD_CLOSE;
     }
 

@@ -2,14 +2,14 @@ Manifest-Version: 1.0
 Ant-Version: Apache Ant 1.9.7
 Created-By: 1.8.0_121-b13 (Oracle Corporation)
 Built-By: darry
-Main-Class: com.oathouse.oss.server.ObjectStoreServer
+Main-Class: 
 
 Name: aistac-api-sockets
 Specification-Title: aistac-api-sockets library
 Specification-Version: 2.01
 Specification-Vendor: aistac.io oatridge.io
 Implementation-Title: aistac-api-sockets release patch
-Implementation-Version: 004
+Implementation-Version: 016
 Implementation-Vendor: aistac.io oatridge.io
 
 Name: ${manifest.section.package}

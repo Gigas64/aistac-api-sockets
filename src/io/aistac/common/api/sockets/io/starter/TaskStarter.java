@@ -95,10 +95,10 @@ public class TaskStarter {
 
         LOGGER.info(STARTER, "Server Started [" + taskPort + "]...");
         // set the main properties
-        TaskPropertiesService.getInstance().add("task.profile.owner", taskName);
-        TaskPropertiesService.getInstance().add("task.profile.instance", ValueHolder.uniqueName(taskName, "instance"));
-        TaskPropertiesService.getInstance().add("microlib.io.server.port", taskPort);
-        TaskPropertiesService.getInstance().add("microlib.canonical.objectbean.xml.root", xmlRoot);
+        TaskPropertiesService.getInstance().add("aistac.task.profile.owner", taskName);
+        TaskPropertiesService.getInstance().add("aistac.task.profile.instance", ValueHolder.uniqueName(taskName, "instance"));
+        TaskPropertiesService.getInstance().add("aistac.api.sockets.server.port", taskPort);
+        TaskPropertiesService.getInstance().add("aistac.canonical.objectbean.xml.root", xmlRoot);
 
         // initialise the Connection Service
         ConnectionService.getInstance();
@@ -107,7 +107,7 @@ public class TaskStarter {
             // register the config task connection with the ConnectionService
             final ConnectionBean propertiesConnection = ConnectionService.registerConnection(ConnectionTypeEnum.CLIENT, propertiesHost, propertiesPort);
             // add to properties
-            TaskPropertiesService.getInstance().add("connection.properties.id", propertiesConnection.getId());
+            TaskPropertiesService.getInstance().add("aistac.connection.properties.id", propertiesConnection.getId());
             // send a request to get all properties
 
             final int command = CommandBits.CMD_PROPERTY | CommandBits.REQ_OBSERVE | CommandBits.DATA_COMMSXML | CommandBits.OPT_RETRY;

@@ -21,14 +21,18 @@ import io.aistac.common.canonical.log.LoggerQueueService;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import javafx.beans.binding.Bindings;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 
 /**
  *
@@ -42,14 +46,8 @@ public class TransportQueueInterfaceTest {
     public void setUp() {
     }
 
-    @Test
+    @Test(timeout = 12000)
     public void testTestSend() throws Exception {
-        ExecutorService executor = Executors.newCachedThreadPool(Executors.defaultThreadFactory());
-        //setup logging
-        Callable<String> worker = () -> {
-                    return writeLogs();
-        };
-        executor.submit(worker);
 
         final int command = CommandBits.CMD_REQUEST | CommandBits.REQ_KEY | CommandBits.DATA_INTEGER;
         final String data = "12";
@@ -74,20 +72,59 @@ public class TransportQueueInterfaceTest {
         while(delivery.getTransport() == null) {}
         assertThat(delivery.getTransport(),is(take));
     }
+    /**
+     * *************************************
+     * logging to output screen
+     **************************************
+     */
+    private static ExecutorService executor;
 
-    private String writeLogs() {
+    @BeforeClass
+    public static void setUpClass() {
+        executor = Executors.newCachedThreadPool(Executors.defaultThreadFactory());
+        //setup logging
+        Callable<String> worker = () -> {
+            return writeLogs();
+        };
+        executor.submit(worker);
+    }
+
+    @AfterClass
+    public static void tearDownClass() {
+        // shut down the executor to print the logs
+        executor.shutdownNow();
+        try {
+            executor.awaitTermination(2, TimeUnit.SECONDS);
+        } catch(InterruptedException ex) {
+            // do nothing
+        }
+    }
+
+    private static String writeLogs() {
         LoggerQueueService queueService = LoggerQueueService.getInstance();
         queueService.setLogLevel(LoggerLevel.TRACE);
         DateFormat formatter = new SimpleDateFormat("HH:mm:ss:SSS");
+
+        LinkedHashMap<String, StringBuffer> logMap = new LinkedHashMap<>();
+        logMap.put("SERVER", new StringBuffer("\nSERVER:\n"));
+        logMap.put("CLIENT", new StringBuffer("\nCLIENT:\n"));
         try {
             while(true) {
                 LoggerBean log = queueService.take();
-                String output = (formatter.format(new Date()) + " " + LoggerLevel.level(log.getId()) + " " + log.getTag() + " " + log.getMessage()).trim();
-                System.out.println(output);
+                logMap.keySet().stream().filter((logName) -> (log.getTag().contains(logName) || logName.equals("ALL"))).forEachOrdered((logName) -> {
+                    logMap.get(logName)
+                        .append(formatter.format(new Date())).append(" ")
+                        .append(LoggerLevel.level(log.getId())).append(" ")
+                        .append(log.getTag()).append(" ")
+                        .append((log.getMessage()).trim()).append("\n");
+                });
             }
         } catch(InterruptedException ex) {
             // fall through
         }
+        logMap.keySet().stream().forEachOrdered((logName) -> {
+            System.out.println(logMap.get(logName).toString());
+        });
         return "Done";
     }
-}
+ }

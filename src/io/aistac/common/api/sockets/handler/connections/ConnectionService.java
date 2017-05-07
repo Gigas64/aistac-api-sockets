@@ -49,7 +49,7 @@ public final class ConnectionService extends AbstractMemoryBeanCache<ConnectionB
         // start the Janitor
         janitorTaskId = TaskHandlerService.registerTaskHandler(new ConnectionJanitor());
         // create the server connection
-        int port = TaskPropertiesService.getIntProp("io.server.port", 10201);
+        int port = TaskPropertiesService.getIntProp("aistac.api.sockets.server.port", 10201);
         serverConnectionId = setConnection(SERVER, "localhost", port).getId();
     }
 

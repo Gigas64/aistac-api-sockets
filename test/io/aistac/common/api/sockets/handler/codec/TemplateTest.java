@@ -4,63 +4,40 @@
  * and open the template in the editor.
  */
 
-package io.aistac.common.api.sockets.handler.sockets;
+package io.aistac.common.api.sockets.handler.codec;
 
-import io.aistac.common.api.sockets.handler.connections.ConnectionBean;
-import io.aistac.common.api.sockets.handler.connections.ConnectionTypeEnum;
-import io.aistac.common.api.sockets.transport.TransportBean;
-import io.aistac.common.api.sockets.transport.TransportQueueService;
-import io.aistac.common.api.sockets.valueholder.CommandBits;
+// common imports
+import io.aistac.common.canonical.data.example.BeanBuilder;
+import io.aistac.common.canonical.data.example.ExampleBean;
+import java.util.*;
+import java.util.AbstractMap.SimpleEntry;
+import java.util.LinkedHashMap;
+import static java.util.Arrays.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+// logging imports
 import io.aistac.common.canonical.log.LoggerBean;
 import io.aistac.common.canonical.log.LoggerLevel;
 import io.aistac.common.canonical.log.LoggerQueueService;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.LinkedHashMap;
+// threading imports
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
+// Test Imports
+import mockit.*;
+import org.junit.*;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
 
 /**
  *
  * @author Darryl Oatridge
  */
-public class SocketServerAsynchronousHandlerTest {
+public class TemplateTest {
 
-    @Test()
-    public void testServer() throws Exception {
-        // server
-        ConnectionBean serverConnection = new ConnectionBean(1, ConnectionTypeEnum.SERVER, "localhost", 10201, -1, "MyServer");
-        SocketServerAsynchronousHandler server = new SocketServerAsynchronousHandler(serverConnection);
-        Future<?> serverWorker = executor.submit(server);
-        while(!server.isRunning()) {}
-        // transport
-        final int command = CommandBits.CMD_REQUEST | CommandBits.REQ_KEY | CommandBits.DATA_INTEGER;
-        TransportBean transport = new TransportBean(1, 1, command, "24", "MyTransport");
-
-        // client
-        ConnectionBean clientConnection = new ConnectionBean(2, ConnectionTypeEnum.CLIENT, "localhost", 10201, -1, "MyClient");
-        SocketClientAsynchronousHandler client = new SocketClientAsynchronousHandler(clientConnection);
-        Future<?> clientWorker = executor.submit(client);
-        while(!client.isRunning()) {}
-
-        // the test
-        TransportQueueService.queue(clientConnection.getQueueOut()).add(transport);
-        TransportBean take = TransportQueueService.queue(serverConnection.getQueueIn()).poll(10, TimeUnit.SECONDS);
-        TransportQueueService.queue(serverConnection.getQueueOut()).add(transport);
-        TransportQueueService.queue(clientConnection.getQueueIn()).poll(10, TimeUnit.SECONDS);
-        //
-        client.stop();
-        clientWorker.get(10, TimeUnit.SECONDS);
-        server.stop();
-        serverWorker.get(10, TimeUnit.SECONDS);
-    }
 
     /**
      * *************************************
@@ -96,12 +73,10 @@ public class SocketServerAsynchronousHandlerTest {
         DateFormat formatter = new SimpleDateFormat("HH:mm:ss:SSS");
 
         LinkedHashMap<String, StringBuffer> logMap = new LinkedHashMap<>();
-        logMap.put("CLIENT", new StringBuffer("\nCLIENT:\n"));
-        logMap.put("SERVER", new StringBuffer("\nSERVER:\n"));
+        logMap.put("ALL", new StringBuffer("\nALL:\n"));
 
         // identify class
-        System.out.println("*** START TEST LOG ***");
-
+        System.out.println("*** Start Test Log ***");
         try {
             while(true) {
                 LoggerBean log = queueService.take();

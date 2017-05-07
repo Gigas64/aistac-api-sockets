@@ -31,7 +31,6 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Logger;
 
 /**
  * The {@code SocketServerHandler} Class
@@ -132,12 +131,15 @@ public class SocketServerAsyncQueueHandler implements TaskHandlerInterface {
                 Callable<Integer> sendWorker = () -> {
                     return sendData(asynchronousSocketChannel);
                 };
-                final int command = taskExecutor.submit(sendWorker).get();
-                LOGGER.trace(SERVER, "Response received from executor: " + CommandBits.getStringFromBits(command) + "");
+                // start up the send
+                taskExecutor.submit(sendWorker);
+                // Wait for the receive worker to exit
+                final int receiveCmd = taskExecutor.submit(sendWorker).get();
+                LOGGER.trace(SERVER, "Response received from executor: " + CommandBits.getStringFromBits(receiveCmd) + "");
                 // close the Socket read for the next accept
                 asynchronousSocketChannelFuture.get().shutdownInput();
                 asynchronousSocketChannelFuture.get().close();
-                if(CommandBits.contain(command, CommandBits.CMD_EXIT)) {
+                if(CommandBits.contain(receiveCmd, CommandBits.CMD_EXIT)) {
                     LOGGER.debug(SERVER, "Command to Exit has been received");
                     isRunning = false;
                 }
@@ -153,6 +155,58 @@ public class SocketServerAsyncQueueHandler implements TaskHandlerInterface {
         }
         LOGGER.debug(SERVER, "No longer waiting to accept incoming connection");
         isRunning = false;
+    }
+    private int receiveData(final AsynchronousSocketChannel asynchronousSocketChannel) throws InterruptedException {
+        final ByteBuffer buffer = ByteBuffer.allocateDirect(1024);
+        //transmitting data
+        try {
+            TransportBean request = null;
+            // allo for 5 timeouts before closing the socket
+            AtomicInteger timeoutRemaining = new AtomicInteger(5);
+            while(asynchronousSocketChannel.isOpen()) {
+                if(!isRunning) {
+                    return CommandBits.CMD_EXIT;
+                }
+                try {
+                    buffer.clear();
+                    // READ SOCKET
+                    LOGGER.trace(SERVER, "Socket Channel Read");
+                    asynchronousSocketChannel.read(buffer).get(5, TimeUnit.SECONDS);
+                    buffer.flip();
+                    if(buffer.hasRemaining()) {
+                        // reset the timeout counter as we did read something
+                        timeoutRemaining.set(5);
+                        try {
+                            request = TransportBean.buildObjectBean(StringEncoder.decode(buffer));
+                            LOGGER.trace(SERVER, "Request TransportBean: " + request.toXML(PRINTED, TRIMMED));
+                            // ADD REQUEST QUEUE
+                            LOGGER.debug(SERVER, "TransportBean request with command " + CommandBits.getStringFromBits(request.getCommand()) + " added to queue [" + connection.getQueueIn() + "]");
+                            // check if the request was an exit
+                            if(CommandBits.contain(request.getCommand(), CommandBits.CMD_EXIT)) {
+                                // send to the recieve queue so it can exit cleanly;
+                                TransportQueueService.queue(connection.getQueueOut()).put(request);
+                                return CommandBits.CMD_EXIT;
+                            }
+                            TransportQueueService.queue(connection.getQueueIn()).add(request);
+                        } catch(ObjectBeanException ex) {
+                            LOGGER.error(SERVER, "Error when building the Object Bean: " + ex.getMessage());
+                        }
+                    } else {
+                        if(timeoutRemaining.decrementAndGet() < 0) {
+                            return CommandBits.CMD_CLOSE;
+                        }
+                        LOGGER.debug(SERVER, "Nothing to read from the client. Retries left [" + timeoutRemaining + "]");
+                    }
+                } catch(TimeoutException ex) {
+                    LOGGER.debug(SERVER, "Socket Channel read timed out before completing. Attempting another read");
+                }
+            }
+        } catch(InterruptedException | ExecutionException | NotYetConnectedException ex) {
+            LOGGER.error(SERVER, "Exception thrown when recieving data: " + ex.toString());
+            // just let it fall out to the end
+        }
+        // return the closed command
+        return CommandBits.CMD_CLOSE;
     }
 
     private int sendData(final AsynchronousSocketChannel asynchronousSocketChannel) throws InterruptedException {

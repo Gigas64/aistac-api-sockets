@@ -79,7 +79,7 @@ public class SocketClientAsynchronousHandler implements TaskHandlerInterface {
             while(isRunning) {
                 // WAIT REQUEST
                 LOGGER.trace(CLIENT, "Poll request queue [" + connection.getQueueOut() + "]");
-                TransportBean response = this.sendRequest(TransportQueueService.queue(connection.getQueueOut()).poll(1, TimeUnit.SECONDS));
+                TransportBean response = this.sendRequest(TransportQueueService.queue(connection.getQueueOut()).poll(5, TimeUnit.SECONDS));
                 // ADD RESPONSE
                 if(response != null) {
                     LOGGER.trace(CLIENT, "Response TransportBean: " + response.toXML(PRINTED, TRIMMED));
@@ -143,7 +143,7 @@ public class SocketClientAsynchronousHandler implements TaskHandlerInterface {
             // WRITE SOCKET
             try {
                 LOGGER.trace(CLIENT, "Write to Socket Channel");
-                socketChannel.write(StringEncoder.encode(request.toXML())).get(1, TimeUnit.SECONDS);
+                socketChannel.write(StringEncoder.encode(request.toXML())).get(5, TimeUnit.SECONDS);
             } catch(TimeoutException timeoutException) {
                 LOGGER.error(CLIENT, "Client [" + connection.getId() + "] timed out when writing to Socket Channel");
                 // as we timed out when we did the write, put the request back on the queue
@@ -154,14 +154,14 @@ public class SocketClientAsynchronousHandler implements TaskHandlerInterface {
             TransportBean response = null;
             try {
                 LOGGER.trace(CLIENT, "Reading from Socket Channel");
-                socketChannel.read(data).get(1, TimeUnit.SECONDS);
+                socketChannel.read(data).get(5, TimeUnit.SECONDS);
                 // decode the data
                 data.flip();
                 if(data.hasRemaining()) {
                     response = TransportBean.buildObjectBean(StringEncoder.decode(data));
                 }
-            } catch(TimeoutException timeoutException) {
-                LOGGER.error(CLIENT, "Client [" + connection.getId() + "] timed out when reading from Socket Channel");
+            } catch(TimeoutException te) {
+                LOGGER.error(CLIENT, "Client [" + connection.getId() + "] timed out when reading from Socket Channel: " + te.getMessage());
                 // Ignore as this allowed us to skip over the code on read timeout
             }
             return response;

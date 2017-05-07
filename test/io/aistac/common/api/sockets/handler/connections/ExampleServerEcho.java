@@ -12,12 +12,10 @@
  */
 package io.aistac.common.api.sockets.handler.connections;
 
-import io.aistac.common.api.sockets.handler.connections.ConnectionBean;
-import io.aistac.common.canonical.log.LoggerQueueService;
 import io.aistac.common.api.sockets.transport.TransportBean;
 import io.aistac.common.api.sockets.transport.TransportQueueInterface;
-import io.aistac.common.api.sockets.transport.TransportService;
 import io.aistac.common.api.sockets.valueholder.CommandBits;
+import io.aistac.common.canonical.log.LoggerQueueService;
 
 /**
  * The {@code ExampleServerEcho} Class
